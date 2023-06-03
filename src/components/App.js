@@ -9,10 +9,10 @@ import Error404 from "../pages/Error404";
 function App() {
   return (
     <BrowserRouter>
-      <Routes>npm
+      <Routes>
         <Route path="/" element={<Layout/>}>
-          <Route index element={<Dashboard/>}/>
-          <Route path="/network" element={<Network/>}/>
+          <Route index element={<Network/>}/>
+          <Route path="/dashboard" element={<Dashboard/>}/>
           <Route path="/statistics" element={<Statistics/>}/>
           <Route path="/administration" element={<Administration/>}/>
           <Route path="*" element={<Error404/>}/>

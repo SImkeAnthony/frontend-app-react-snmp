@@ -1,6 +1,11 @@
+import MachineEntityData from "../data/MachineEntityData";
+
 const Network = ()=>{
     return(
-        <h1>Network</h1>
+        <div>
+            <h1>Network</h1>
+            <MachineEntityData/>
+        </div>
     )
 };
 
