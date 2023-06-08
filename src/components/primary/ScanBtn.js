@@ -1,8 +1,12 @@
 import React from "react";
-
+import MachineEntityService from "../../services/MachineEntityService";
 const ScanBtn = (props)=>{
     const handleClick = ()=>{
-        console.log("click");
+        MachineEntityService.networkScan().then((response)=>{
+        })
+        .catch(Error=>{
+            console.log(Error);
+        });
     }
     return(
         <button onClick={handleClick}>scan network</button>

@@ -10,7 +10,7 @@ class MachineEntityData extends React.Component{
         }
     }
     componentDidMount() {
-        MachineEntityService.call().then((response)=>{
+        MachineEntityService.getMachineEntities().then((response)=>{
             this.setState({machineEntities:response.data});
             console.log(this.state.machineEntities);
         })
