@@ -19,7 +19,6 @@ const MachineEntityData = () => {
             try{
                 //perform redux action here
                 let newMachineEntities = MachineEntityMapper.mapJsonEntitiesToEntities(response.data);
-                console.log(newMachineEntities);
                 dispatch(SetMachineEntities(newMachineEntities));
             }catch (Error){
                 console.log("set machine entities error : "+Error);
