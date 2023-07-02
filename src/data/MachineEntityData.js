@@ -18,6 +18,7 @@ const MachineEntityData = () => {
         MachineEntityService.getMachineEntities().then((response)=>{
             try{
                 //perform redux action here
+                console.log(response.data);
                 let newMachineEntities = MachineEntityMapper.mapJsonEntitiesToEntities(response.data);
                 dispatch(SetMachineEntities(newMachineEntities));
             }catch (Error){
@@ -34,8 +35,6 @@ const MachineEntityData = () => {
             <table className="table table_striped">
                 <thead>
                 <tr>
-                    <td>Mac Address</td>
-                    <td>Ip Address</td>
                     <td>Hostname</td>
                     <td>Os</td>
                     <td>Snmp</td>
@@ -46,8 +45,6 @@ const MachineEntityData = () => {
                     machineEntities.map(
                         machineEntity =>
                             <tr>
-                                <td>{machineEntity.macAddress}</td>
-                                <td>{machineEntity.ipAddress}</td>
                                 <td>{machineEntity.hostname}</td>
                                 <td>{machineEntity.os}</td>
                                 <td>{machineEntity.snmp.toString()}</td>
