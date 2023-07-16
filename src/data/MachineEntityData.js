@@ -1,33 +1,10 @@
-import MachineEntityService from "../services/MachineEntityService";
-import React, {useEffect} from "react";
-import {useDispatch, useSelector} from "react-redux";
-import {SetMachineEntities} from "../components/redux/action/MachineEntitiesAction";
-import MachineEntityMapper from "../services/MachineEntityMapper";
+import React from "react";
+import {useSelector} from "react-redux";
+
+//Pay attention delete this const that should be never used !!
 const MachineEntityData = () => {
 
-    const dispatch = useDispatch();
-    //get state
-    /*
-     * first : name of reducer configured in store.js
-     * second : name of variable use in the reducer (see initialState in the reducer file)
-     */
     const machineEntities = useSelector(state => state.machineEntitiesReducer.machineEntities);
-
-    useEffect(()=>{
-        //get data from Api Rest
-        MachineEntityService.getMachineEntities().then((response)=>{
-            try{
-                //perform redux action here
-                console.log(response.data);
-                let newMachineEntities = MachineEntityMapper.mapJsonEntitiesToEntities(response.data);
-                dispatch(SetMachineEntities(newMachineEntities));
-            }catch (Error){
-                console.log("set machine entities error : "+Error);
-            }
-        }).catch((Error)=>{
-                console.log("call api error : "+Error);
-            });
-    },[dispatch]);
 
     return (
         <div>

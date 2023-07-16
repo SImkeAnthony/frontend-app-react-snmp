@@ -1,4 +1,4 @@
-import Layout from "../pages/Layout";
+import Layout from "./primary/Layout";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Dashboard from "../pages/Dashboard";
 import Network from "../pages/Network";
@@ -7,8 +7,35 @@ import Service from "../pages/Service";
 import Error404 from "../pages/Error404";
 import Inventory from "../pages/Inventory";
 import Alert from "../pages/Alert";
+import MachineEntityService from "../services/MachineEntityService";
+import MachineEntityMapper from "../services/MachineEntityMapper";
+import {SetMachineEntities} from "./redux/action/MachineEntitiesAction";
+import {useEffect} from "react";
+import {useDispatch} from "react-redux";
 
-function App() {
+const App = ()=> {
+  const dispatch = useDispatch();
+  //get state
+  /*
+   * first : name of reducer configured in store.js
+   * second : name of variable use in the reducer (see initialState in the reducer file)
+   */
+  useEffect(()=>{
+    //get data from Api Rest
+    MachineEntityService.getMachineEntities().then((response)=>{
+      try{
+        //perform redux action here
+        console.log(response.data);
+        let newMachineEntities = MachineEntityMapper.mapJsonEntitiesToEntities(response.data);
+        dispatch(SetMachineEntities(newMachineEntities));
+      }catch (Error){
+        console.log("set machine entities error : "+Error);
+      }
+    }).catch((Error)=>{
+      console.log("call api error : "+Error);
+    });
+  },[dispatch]);
+
   return (
     <BrowserRouter>
       <Routes>

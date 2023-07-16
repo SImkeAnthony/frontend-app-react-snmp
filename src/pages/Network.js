@@ -1,5 +1,5 @@
 import MachineEntityData from "../data/MachineEntityData";
-import ScanBtn from "../components/primary/ScanBtn";
+import ScanBtn from "../components/secondary/ScanBtn";
 
 const Network = ()=>{
     return(
