@@ -7,46 +7,45 @@ import Service from "../data/Service";
 class MachineEntityMapper{
     static mapJsonEntitiesToEntities(json){
         let machineEntities=[];
-        json.map(entity=>{
-            let machine = new MachineEntity(entity.hostname,entity.os,entity.snmp);
+        for(let i=0;i<json.length;i++){
+            let machine = new MachineEntity(json[i].hostname,json[i].os,json[i].snmp.toString());
             //process interfaces
-            let interfaces = entity.interfaces;
+            let interfaces = json[i].interfaces;
             interfaces.map(intEntity=>{
                 let interfaceEntity = new Interface(intEntity.description,intEntity.macAddress,intEntity.ipAddress);
                 machine.interfaces.push(interfaceEntity);
                 return interfaceEntity;
             })
             //process processors
-            let processors = entity.processors;
+            let processors = json[i].processors;
             processors.map(procEntity=>{
                 let processor = new Processor(procEntity.reference,procEntity.core,procEntity.vcore,procEntity.frequency);
                 machine.processors.push(processor);
                 return processor;
             })
             //process persistent storages
-            let pStorages = entity.persistentStorages;
+            let pStorages = json[i].persistentStorages;
             pStorages.map(pStorageEntity=>{
                 let pStorage = new PStorage(pStorageEntity.reference,pStorageEntity.available,pStorageEntity.used);
                 machine.pStorages.push(pStorage);
                 return pStorage;
             })
             //process volatiles storages
-            let vStorages = entity.volatileStorages;
+            let vStorages = json[i].volatileStorages;
             vStorages.map(vStorageEntity=>{
                 let vStorage = new VStorage(vStorageEntity.reference,vStorageEntity.available,vStorageEntity.frequency,vStorageEntity.latency);
                 machine.vStorages.push(vStorage);
                 return vStorage;
             })
             //process services
-            let services = entity.services;
+            let services = json[i].services;
             services.map(serviceEntity=>{
                 let service = new Service(serviceEntity.name,serviceEntity.description,serviceEntity.port);
                 machine.services.push(service);
                 return service;
             })
             machineEntities.push(machine);
-            return machineEntities;
-        });
+        }
         return machineEntities;
     }
 };

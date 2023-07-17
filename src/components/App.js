@@ -8,7 +8,6 @@ import Error404 from "../pages/Error404";
 import Inventory from "../pages/Inventory";
 import Alert from "../pages/Alert";
 import MachineEntityService from "../services/MachineEntityService";
-import MachineEntityMapper from "../services/MachineEntityMapper";
 import {SetMachineEntities} from "./redux/action/MachineEntitiesAction";
 import {useEffect} from "react";
 import {useDispatch} from "react-redux";
@@ -25,9 +24,7 @@ const App = ()=> {
     MachineEntityService.getMachineEntities().then((response)=>{
       try{
         //perform redux action here
-        console.log(response.data);
-        let newMachineEntities = MachineEntityMapper.mapJsonEntitiesToEntities(response.data);
-        dispatch(SetMachineEntities(newMachineEntities));
+        dispatch(SetMachineEntities(response.data));
       }catch (Error){
         console.log("set machine entities error : "+Error);
       }

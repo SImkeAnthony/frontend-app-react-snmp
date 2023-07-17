@@ -1,5 +1,7 @@
+
 const initialSate = {
-    machineEntities:[],
+    machineEntities:"",
+    selectedMachineEntity:"",
 };
 const MachineEntitiesReducer = (state = initialSate,action) => {
     switch (action.type){
@@ -7,6 +9,11 @@ const MachineEntitiesReducer = (state = initialSate,action) => {
             return {
                 ...state,
                 machineEntities: action.machineEntities,
+            }
+        case 'SELECT-MACHINE-ENTITY':
+            return {
+                ...state,
+                selectedMachineEntity: action.selectedMachineEntity,
             }
         default:
             return state;
