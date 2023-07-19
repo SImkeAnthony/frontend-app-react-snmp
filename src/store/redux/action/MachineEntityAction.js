@@ -4,7 +4,7 @@ export const SetMachineEntities = (newMachineEntities) =>{
         machineEntities: newMachineEntities
     };
 };
-export const selectMachineEntity = (newSelectedMachine)=>{
+export const SelectMachineEntity = (newSelectedMachine)=>{
     return{
         type: "SELECT-MACHINE-ENTITY",
         selectedMachineEntity : newSelectedMachine

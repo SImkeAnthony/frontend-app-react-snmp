@@ -53,3 +53,10 @@ div.d-flex > div.d-flex > div.list-group > button.list-group-item.list-group-ite
 div.d-flex > div.d-flex > div.list-group > button.list-group-item.list-group-item-action:active{
   color: $blue-400;
 }
+/* btn-selected */
+div.d-flex > div.d-flex >button.nav-link.btn-selected{
+  color: $gray-500;
+}
+div.d-flex > div.d-flex > div.list-group > button.list-group-item.list-group-item-action.btn-selected{
+  color: $gray-500;
+}

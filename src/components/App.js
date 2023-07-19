@@ -7,23 +7,18 @@ import Service from "../pages/Service";
 import Error404 from "../pages/Error404";
 import Inventory from "../pages/Inventory";
 import Alert from "../pages/Alert";
-import MachineEntityService from "../services/MachineEntityService";
-import {SetMachineEntities} from "./redux/action/MachineEntitiesAction";
-import {useEffect} from "react";
 import {useDispatch} from "react-redux";
+import MachineEntityService from "../services/MachineEntityService";
+import {SetMachineEntities} from "../store/redux/action/MachineEntityAction";
+import {useEffect} from "react";
 
 const App = ()=> {
   const dispatch = useDispatch();
-  //get state
-  /*
-   * first : name of reducer configured in store.js
-   * second : name of variable use in the reducer (see initialState in the reducer file)
-   */
+
   useEffect(()=>{
     //get data from Api Rest
     MachineEntityService.getMachineEntities().then((response)=>{
       try{
-        //perform redux action here
         dispatch(SetMachineEntities(response.data));
       }catch (Error){
         console.log("set machine entities error : "+Error);
@@ -32,7 +27,6 @@ const App = ()=> {
       console.log("call api error : "+Error);
     });
   },[dispatch]);
-
   return (
     <BrowserRouter>
       <Routes>

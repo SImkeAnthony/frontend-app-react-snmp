@@ -1,9 +1,8 @@
-
 const initialSate = {
     machineEntities:"",
     selectedMachineEntity:"",
 };
-const MachineEntitiesReducer = (state = initialSate,action) => {
+const MachineEntityReducer = (state = initialSate, action) => {
     switch (action.type){
         case 'SET-MACHINE-ENTITIES':
             return {
@@ -19,4 +18,4 @@ const MachineEntitiesReducer = (state = initialSate,action) => {
             return state;
     }
 };
-export default MachineEntitiesReducer;
+export default MachineEntityReducer;

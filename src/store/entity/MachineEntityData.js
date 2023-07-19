@@ -4,7 +4,7 @@ import {useSelector} from "react-redux";
 //Pay attention delete this const that should be never used !!
 const MachineEntityData = () => {
 
-    const machineEntities = useSelector(state => state.machineEntitiesReducer.machineEntities);
+    const machineEntities = useSelector(state => state.machineEntityReducer.machineEntities);
 
     return (
         <div>
