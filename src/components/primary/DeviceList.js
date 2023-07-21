@@ -4,7 +4,6 @@ import {MachineRequestStore} from "../../store/MachineRequestStore";
 const DeviceList=()=>{
     const [selectedButton, setSelectedButton] = useState(null);
     const {setSelectedMachineEntity,getMachineEntities}= MachineRequestStore();
-    //dispatch is used to perform redux action (necessary)
     const generateButtonClass = (name) => {
         if (name === selectedButton) {
             return 'list-group-item list-group-item-action fs-4 btn-selected';
@@ -22,24 +21,22 @@ const DeviceList=()=>{
 
     return(
 
-        <div className="text-center row m-0 container-fluid p-0">
-            <div className="d-flex flex-row flex-wrap justify-content-start text-center m-0 p-0">
-                <div className="d-flex flex-column justify-content-start align-items-center p-3 m-0 col-12 col-md-auto col-lg-auto">
+        <div className="text-center container-fluid m-0 container-fluid p-0">
+            <div className="container-fluid d-flex flex-row flex-wrap justify-content-start text-center m-0 p-0">
+                <div className="d-flex flex-grow-1 flex-column justify-content-start align-items-center p-3 m-0" style={{maxWidth:"max-content"}}>
                     <button className="nav-link fs-4 dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#linkDevice" aria-expanded="true">Devices</button>
-                    <div className="collapse list-group list-group-flush overflow-y-auto mt-1" id="linkDevice">
+                    <div className="collapse list-group list-group-flush overflow-y-auto mt-1 overflow-auto" id="linkDevice" style={{maxHeight:"calc(100vh - 150px)"}}>
                         <button className={generateButtonClass('reset')} onClick={handleSelect}>reset</button>
                         {getMachineEntities().map(machine=>
                             <button key={getMachineEntities().indexOf(machine)} className={generateButtonClass(machine.hostname)} onClick={handleSelect}>{machine.hostname}</button>
                         )}
                     </div>
                 </div>
-                <div className="p-0 col-12 col-md-5 col-lg-auto flex-grow-1">
+                <div className="p-0 flex-grow-1 overflow-auto " style={{maxHeight:"calc(100vh - 50px)"}}>
                     <Outlet/>
                 </div>
             </div>
         </div>
     );
 }
-//col-sm-12 col-md-4 col-lg-3 col-xl-2
-//col-sm-12 col-md-7 col-lg-8 col-xl-9
 export default DeviceList;

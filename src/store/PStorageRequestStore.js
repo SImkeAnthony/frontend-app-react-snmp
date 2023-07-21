@@ -25,6 +25,7 @@ export const PStorageRequestStore = () => {
         const allPStorages = [];
         MachineEntityMapper.mapJsonEntitiesToEntities(machineEntities).map(machineEntity=>{
             allPStorages.push(...machineEntity.pStorages);
+            return machineEntity.pStorages;
         })
         return allPStorages;
     }

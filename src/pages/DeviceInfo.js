@@ -5,9 +5,9 @@ import MachineEntityMapper from "../store/MachineEntityMapper";
 const DeviceInfo = ()=>{
     const machineEntities = MachineEntityMapper.mapJsonEntitiesToEntities(useSelector(state => state.machineEntityReducer.machineEntities));
     return(
-        <div className="mt-4 d-flex flex-row flex-wrap justify-content-around align-content-sm-around">
+        <div className="mt-4 mb-5 d-flex flex-row flex-wrap justify-content-around align-content-sm-around">
             {machineEntities.map(machine=>
-                <IdentityCard key={machineEntities.indexOf(machine)} hostname={machine.hostname} os={machine.os} snmp={machine.snmp.toString()}/>
+                <IdentityCard key={machine.id} hostname={machine.hostname} os={machine.os} snmp={machine.snmp.toString()}/>
             )}
         </div>
     )

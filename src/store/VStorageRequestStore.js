@@ -1,7 +1,6 @@
 import {useDispatch, useSelector} from "react-redux";
 import {SelectVStorageEntity} from "./redux/action/VStorageEntityAction";
 import MachineEntityMapper from "./MachineEntityMapper";
-import machineEntity from "./entity/MachineEntity";
 
 export  const  VStorageRequestStore = () => {
     const machineEntities = useSelector(state => state.machineEntityReducer.machineEntities);
@@ -26,6 +25,7 @@ export  const  VStorageRequestStore = () => {
         const allVStorages = [];
         MachineEntityMapper.mapJsonEntitiesToEntities(machineEntities).map(machineEntity=>{
             allVStorages.push(...machineEntity.vStorages);
+            return machineEntity.vStorages;
         })
         return allVStorages;
     }

@@ -1,5 +1,6 @@
 class MachineEntity{
-    constructor(hostname,os,snmp) {
+    constructor(id,hostname,os,snmp) {
+        this.id = id;
         this.hostname = hostname;
         this.os = os;
         this.snmp = snmp;
@@ -10,7 +11,7 @@ class MachineEntity{
         this.services = [];
     }
     display(){
-        return "hostname : "+this.hostname+"||os : "+this.os+"||snmp : "+this.snmp;
+        return "id : "+this.id+"hostname : "+this.hostname+"||os : "+this.os+"||snmp : "+this.snmp;
     }
 }
 export default MachineEntity;

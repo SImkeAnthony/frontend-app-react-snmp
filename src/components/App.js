@@ -19,6 +19,7 @@ const App = ()=> {
     //get data from Api Rest
     MachineEntityService.getMachineEntities().then((response)=>{
       try{
+        console.log(response.data);
         dispatch(SetMachineEntities(response.data));
       }catch (Error){
         console.log("set machine entities error : "+Error);
