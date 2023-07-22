@@ -3,7 +3,7 @@ export const ProcessorTable = () => {
     const {getProcessors} = ProcessorRequestStore();
 
     return(
-        <div className="d-flex flex-shrink-1 flex-column flex-wrap justify-content-start align-items-center no-background m-3 overflow-auto">
+        <div className="d-flex flex-shrink-1 flex-column flex-wrap justify-content-start align-items-center m-3">
             <h2 className="m-3 mb-4">Processor Description</h2>
             <div className="container-fluid table-responsive overflow-auto" style={{maxHeight:"50vh"}}>
                 <table className="table m-3">

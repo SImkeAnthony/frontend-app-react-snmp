@@ -31,7 +31,7 @@ export const ProcessorRequestStore = () => {
     }
 
     const getProcessorByHostname = (hostname) =>{
-        return MachineEntityMapper.mapJsonEntitiesToEntities(machineEntities).find(machineEntity=>machineEntity.hostname===selectedMachineEntity).processors;
+        return MachineEntityMapper.mapJsonEntitiesToEntities(machineEntities).find(machineEntity=>machineEntity.hostname===hostname).processors;
     }
 
     const getSelectedProcessorEntity = () =>{

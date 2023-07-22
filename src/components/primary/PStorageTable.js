@@ -5,7 +5,7 @@ export const PStorageTable = () => {
     const {getPStorages} = PStorageRequestStore();
 
     return(
-        <div className="d-flex flex-shrink-1 flex-column justify-content-start align-items-center no-background m-3 ">
+        <div className="d-flex flex-shrink-1 flex-column justify-content-start align-items-center m-3 ">
             <h2 className="m-3 mb-4">Persistent Storage Description</h2>
             <div className="container-fluid table-responsive overflow-auto" style={{maxHeight:"50vh"}}>
                 <table className="table m-3">

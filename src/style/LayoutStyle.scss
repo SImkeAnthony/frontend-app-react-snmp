@@ -29,34 +29,39 @@ ul.navbar-nav > li.nav-item > *.navLink:focus {
 }
 
 /* device list */
-div.d-flex > div.d-flex{
+div.list-device > div.blue-background{
   background-color: $blue-400;
 }
-div.d-flex > div.d-flex >button.nav-link{
+div.list-device > div.blue-background >button.nav-link{
   color: $gray-100;
 }
-div.d-flex > div.d-flex > button.nav-link:hover{
+div.list-device > div.blue-background > button.nav-link:hover{
   color: $gray-900;
 }
-div.d-flex > div.d-flex > button.nav-link:active{
+div.list-device > div.blue-background > button.nav-link:active{
   color: $blue-400;
 }
-div.d-flex > div.d-flex > div.list-group > button.list-group-item.list-group-item-action{
+div.list-device > div.blue-background > div.list-group > button.list-group-item.list-group-item-action{
   background-color: $blue-400;
 }
-div.d-flex > div.d-flex > div.list-group > button.list-group-item.list-group-item-action{
+div.list-device > div.blue-background > div.list-group > button.list-group-item.list-group-item-action{
   color: $gray-100;
 }
-div.d-flex > div.d-flex > div.list-group > button.list-group-item.list-group-item-action:hover{
+div.list-device > div.blue-background > div.list-group > button.list-group-item.list-group-item-action:hover{
   color: $gray-900;
 }
-div.d-flex > div.d-flex > div.list-group > button.list-group-item.list-group-item-action:active{
+div.list-device > div.blue-background > div.list-group > button.list-group-item.list-group-item-action:active{
   color: $blue-400;
 }
 /* btn-selected */
-div.d-flex > div.d-flex >button.nav-link.btn-selected{
+div.list-device > div.blue-background >button.nav-link.btn-selected{
   color: $gray-500;
 }
-div.d-flex > div.d-flex > div.list-group > button.list-group-item.list-group-item-action.btn-selected{
+div.list-device > div.blue-background > div.list-group > button.list-group-item.list-group-item-action.btn-selected{
   color: $gray-500;
+}
+@media (min-width: 992px){
+  div.max-width{
+    max-width: max-content;
+  }
 }

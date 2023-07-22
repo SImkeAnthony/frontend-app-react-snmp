@@ -8,15 +8,15 @@ import {VStorageStats} from "../components/primary/VStorageStats";
 const Inventory = ()=>{
     return(
         <div className="mb-5 d-flex flex-column justify-content-center align-content-center">
-            <div className="d-flex flex-row flex-grow-1 flex-wrap justify-content-around align-content-between no-background">
+            <div className="d-flex flex-row flex-grow-1 flex-wrap justify-content-around align-content-between">
                 <ProcessorTable/>
                 <ProcessorStats/>
             </div>
-            <div className="d-flex flex-row flex-grow-1 flex-wrap justify-content-around align-content-between no-background">
+            <div className="d-flex flex-row flex-grow-1 flex-wrap justify-content-around align-content-between">
                 <PStorageTable/>
                 <PStorageStats/>
             </div>
-            <div className="d-flex flex-row flex-grow-1 flex-wrap justify-content-around align-content-between no-background">
+            <div className="d-flex flex-row flex-grow-1 flex-wrap justify-content-around align-content-between">
                 <VStorageTable/>
                 <VStorageStats/>
             </div>
