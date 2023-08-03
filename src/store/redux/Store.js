@@ -5,6 +5,7 @@ import ProcessorEntityReducer from "./reducer/ProcessorEntityReduxer";
 import PStorageEntityReducer from "./reducer/PStorageEntityReducer";
 import VStorageEntityReducer from "./reducer/VStorageEntityReducer";
 import ServiceEntityReducer from "./reducer/ServiceEntityReducer";
+import AlertReducer from "./reducer/AlertReducer";
 const store = configureStore({
     reducer:{
       //add some reducers here
@@ -17,7 +18,8 @@ const store = configureStore({
         processorEntityReducer : ProcessorEntityReducer,
         pStorageEntityReducer : PStorageEntityReducer,
         vStorageEntityReducer : VStorageEntityReducer,
-        serviceEntityReducer : ServiceEntityReducer
+        serviceEntityReducer : ServiceEntityReducer,
+        alertReducer : AlertReducer
     },
 });
 export default store;

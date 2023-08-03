@@ -9,27 +9,6 @@ const DeviceInfo = ()=>{
                 {machineEntities.map(machine=>
                     <IdentityCard key={machine.id} hostname={machine.hostname} os={machine.os} snmp={machine.snmp.toString()}/>
                 )}
-                <IdentityCard hostname={"default"} os={"default"} snmp={"false"}/>
-                <IdentityCard hostname={"default"} os={"default"} snmp={"false"}/>
-                <IdentityCard hostname={"default"} os={"default"} snmp={"false"}/>
-                <IdentityCard hostname={"default"} os={"default"} snmp={"false"}/>
-                <IdentityCard hostname={"default"} os={"default"} snmp={"false"}/>
-                <IdentityCard hostname={"default"} os={"default"} snmp={"false"}/>
-                <IdentityCard hostname={"default"} os={"default"} snmp={"false"}/>
-                <IdentityCard hostname={"default"} os={"default"} snmp={"false"}/>
-                <IdentityCard hostname={"default"} os={"default"} snmp={"false"}/>
-                <IdentityCard hostname={"default"} os={"default"} snmp={"false"}/>
-                <IdentityCard hostname={"default"} os={"default"} snmp={"false"}/>
-                <IdentityCard hostname={"default"} os={"default"} snmp={"false"}/>
-                <IdentityCard hostname={"default"} os={"default"} snmp={"false"}/>
-                <IdentityCard hostname={"default"} os={"default"} snmp={"false"}/>
-                <IdentityCard hostname={"default"} os={"default"} snmp={"false"}/>
-                <IdentityCard hostname={"default"} os={"default"} snmp={"false"}/>
-                <IdentityCard hostname={"default"} os={"default"} snmp={"false"}/>
-                <IdentityCard hostname={"default"} os={"default"} snmp={"false"}/>
-                <IdentityCard hostname={"default"} os={"default"} snmp={"false"}/>
-                <IdentityCard hostname={"default"} os={"default"} snmp={"false"}/>
-                <IdentityCard hostname={"default"} os={"default"} snmp={"false"}/>
         </div>
     )
 };
