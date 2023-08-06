@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const MACHINE_CALL_START = 'http://localhost:8080';
-const RESCAN = "http://localhost:8080/scan"
+export const MACHINE_CALL_START = 'http://localhost:8080';
+export const RESCAN = "http://localhost:8080/scan"
 
 class MachineEntityService {
     static getMachineEntities(){

@@ -2,6 +2,8 @@
   "name": "frontend-app-react-snmp",
   "version": "0.1.0",
   "private": true,
+  "_commentaire": "type need to be set at value <module> to use import statement in the test file",
+  "type": "module",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.16.5",
@@ -20,12 +22,16 @@
     "saas": "^1.0.0",
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "@babel/register": "^7.7.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "mocha",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -47,6 +53,10 @@
     ]
   },
   "devDependencies": {
+    "mocha": "^10.2.0",
+    "chai": "^4.3.7",
+    "faker": "^4.1.0",
+    "sinon": "^15.0.2",
     "react-router-dom": "^6.4.3"
   }
 }
