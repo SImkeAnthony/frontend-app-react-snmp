@@ -1,6 +1,6 @@
-import AlertLog from "../components/primary/AlertLog";
-import AlertAvailable from "../components/primary/AlertAvailable";
-import AlertForm from "../components/primary/AlertForm";
+import AlertLog from "../components/primary/AlertLog.js";
+import AlertAvailable from "../components/primary/AlertAvailable.js";
+import AlertForm from "../components/primary/AlertForm.js";
 
 const Alert = ()=>{
     return(

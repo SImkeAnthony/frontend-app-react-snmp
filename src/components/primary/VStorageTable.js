@@ -1,4 +1,4 @@
-import {VStorageRequestStore} from "../../store/VStorageRequestStore";
+import {VStorageRequestStore} from "../../store/VStorageRequestStore.js";
 
 
 export const VStorageTable = () => {

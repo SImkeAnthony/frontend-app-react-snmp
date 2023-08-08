@@ -1,6 +1,6 @@
-import NetworkStats from "../components/primary/NetworkStats";
-import NetworkTrafficStats from "../components/primary/NetworkTrafficStats";
-import MachineStats from "../components/primary/MachineStats";
+import NetworkStats from "../components/primary/NetworkStats.js";
+import NetworkTrafficStats from "../components/primary/NetworkTrafficStats.js";
+import MachineStats from "../components/primary/MachineStats.js";
 
 
 const Dashboard = ()=>{

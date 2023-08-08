@@ -1,4 +1,4 @@
-import Alert from "./entity/Alert";
+import Alert from "./entity/Alert.js";
 export class AlertMapper{
     static mapAlertJsonToEntities(json){
         let alerts = [];

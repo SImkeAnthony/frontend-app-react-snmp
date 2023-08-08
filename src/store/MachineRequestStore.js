@@ -1,5 +1,5 @@
-import MachineEntityMapper from "./MachineEntityMapper";
-import {SelectMachineEntity, SetMachineEntities} from "./redux/action/MachineEntityAction";
+import MachineEntityMapper from "./MachineEntityMapper.js";
+import {SelectMachineEntity, SetMachineEntities} from "./redux/action/MachineEntityAction.js";
 import {useDispatch, useSelector} from "react-redux";
 
 export const MachineRequestStore = ()=>{

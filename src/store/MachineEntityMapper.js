@@ -1,9 +1,9 @@
-import MachineEntity from "./entity/MachineEntity";
-import Interface from "./entity/Interface";
-import Processor from "./entity/Processor";
-import PStorage from "./entity/PStorage";
-import VStorage from "./entity/VStorage";
-import Service from "./entity/Service";
+import MachineEntity from "./entity/MachineEntity.js";
+import Interface from "./entity/Interface.js";
+import Processor from "./entity/Processor.js";
+import PStorage from "./entity/PStorage.js";
+import VStorage from "./entity/VStorage.js";
+import Service from "./entity/Service.js";
 class MachineEntityMapper{
     static mapJsonEntitiesToEntities(json){
         let machineEntities=[];

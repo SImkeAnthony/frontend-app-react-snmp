@@ -1,6 +1,6 @@
 import {useSelector} from "react-redux";
-import IdentityCard from "../components/primary/IdentityCard";
-import MachineEntityMapper from "../store/MachineEntityMapper";
+import IdentityCard from "../components/primary/IdentityCard.js";
+import MachineEntityMapper from "../store/MachineEntityMapper.js";
 
 const DeviceInfo = ()=>{
     const machineEntities = MachineEntityMapper.mapJsonEntitiesToEntities(useSelector(state => state.machineEntityReducer.machineEntities));

@@ -1,4 +1,4 @@
-import {InterfaceRequestStore} from "../../store/InterfaceRequestStore";
+import {InterfaceRequestStore} from "../../store/InterfaceRequestStore.js";
 
 const InterfaceTable = () => {
     const {getInterfaces} = InterfaceRequestStore();

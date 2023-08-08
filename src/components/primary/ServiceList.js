@@ -1,5 +1,5 @@
-import ServiceCard from "./ServiceCard";
-import {ServiceRequestStore} from "../../store/ServiceRequestStore";
+import ServiceCard from "./ServiceCard.js";
+import {ServiceRequestStore} from "../../store/ServiceRequestStore.js";
 
 const ServiceList = () => {
     const {getServices} = ServiceRequestStore();

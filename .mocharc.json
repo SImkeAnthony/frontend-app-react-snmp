@@ -1,7 +1,0 @@
-{
-    "_commentaire": "basic configuration for mocha to activate the recursive test in the test folder",
-    "recursive": true,
-    "glob": ["./test/*.test.js"],
-    "package": "./package.json",
-    "require": ["@babel/register"]
-}

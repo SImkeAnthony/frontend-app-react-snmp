@@ -1,6 +1,6 @@
 import {useDispatch, useSelector} from "react-redux";
-import MachineEntityMapper from "./MachineEntityMapper";
-import {SelectProcessorEntity} from "./redux/action/ProcessorEntityAction";
+import MachineEntityMapper from "./MachineEntityMapper.js";
+import {SelectProcessorEntity} from "./redux/action/ProcessorEntityAction.js";
 
 export const ServiceRequestStore = () => {
     const machineEntities = useSelector(state => state.machineEntityReducer.machineEntities);

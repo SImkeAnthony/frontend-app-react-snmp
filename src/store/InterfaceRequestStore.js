@@ -1,6 +1,6 @@
 import {useDispatch, useSelector} from "react-redux";
-import MachineEntityMapper from "./MachineEntityMapper";
-import {SelectInterfaceEntity} from "./redux/action/InterfaceEntityAction";
+import MachineEntityMapper from "./MachineEntityMapper.js";
+import {SelectInterfaceEntity} from "./redux/action/InterfaceEntityAction.js";
 export const InterfaceRequestStore = () => {
     const machineEntities = useSelector(state => state.machineEntityReducer.machineEntities);
     const selectedMachineEntity = useSelector(state => state.machineEntityReducer.selectedMachineEntity);

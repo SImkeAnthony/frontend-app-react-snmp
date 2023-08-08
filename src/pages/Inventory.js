@@ -1,9 +1,9 @@
-import {ProcessorTable} from "../components/primary/ProcessorTable";
-import {ProcessorStats} from "../components/primary/ProcessorStats";
-import {PStorageTable} from "../components/primary/PStorageTable";
-import {PStorageStats} from "../components/primary/PStorageStats";
-import {VStorageTable} from "../components/primary/VStorageTable";
-import {VStorageStats} from "../components/primary/VStorageStats";
+import {ProcessorTable} from "../components/primary/ProcessorTable.js";
+import {ProcessorStats} from "../components/primary/ProcessorStats.js";
+import {PStorageTable} from "../components/primary/PStorageTable.js";
+import {PStorageStats} from "../components/primary/PStorageStats.js";
+import {VStorageTable} from "../components/primary/VStorageTable.js";
+import {VStorageStats} from "../components/primary/VStorageStats.js";
 
 const Inventory = ()=>{
     return(

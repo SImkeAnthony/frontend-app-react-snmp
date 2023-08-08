@@ -1,4 +1,4 @@
-import {AlertRequestStore} from "../../store/AlertRequestStore";
+import {AlertRequestStore} from "../../store/AlertRequestStore.js";
 
 const AlertAvailable = () =>{
     const {getAlerts} = AlertRequestStore();

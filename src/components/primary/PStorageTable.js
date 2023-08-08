@@ -1,4 +1,4 @@
-import {PStorageRequestStore} from "../../store/PStorageRequestStore";
+import {PStorageRequestStore} from "../../store/PStorageRequestStore.js";
 
 
 export const PStorageTable = () => {

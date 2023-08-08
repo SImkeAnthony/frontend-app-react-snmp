@@ -1,5 +1,5 @@
-import NavBar from "./NavBar";
-import DeviceList from "./DeviceList";
+import NavBar from "./NavBar.js";
+import DeviceList from "./DeviceList.js";
 
 function Layout(){
 

@@ -1,6 +1,6 @@
 import {Outlet} from "react-router-dom";
 import {useState} from "react";
-import {MachineRequestStore} from "../../store/MachineRequestStore";
+import {MachineRequestStore} from "../../store/MachineRequestStore.js";
 const DeviceList=()=>{
     const [selectedButton, setSelectedButton] = useState(null);
     const {setSelectedMachineEntity,getMachineEntities}= MachineRequestStore();

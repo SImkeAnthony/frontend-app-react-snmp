@@ -1,6 +1,6 @@
 import {useDispatch, useSelector} from "react-redux";
-import {SelectVStorageEntity} from "./redux/action/VStorageEntityAction";
-import MachineEntityMapper from "./MachineEntityMapper";
+import {SelectVStorageEntity} from "./redux/action/VStorageEntityAction.js";
+import MachineEntityMapper from "./MachineEntityMapper.js";
 
 export  const  VStorageRequestStore = () => {
     const machineEntities = useSelector(state => state.machineEntityReducer.machineEntities);

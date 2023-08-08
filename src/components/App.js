@@ -1,15 +1,15 @@
-import Layout from "./primary/Layout";
+import Layout from "./primary/Layout.js";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import Dashboard from "../pages/Dashboard";
-import Network from "../pages/Network";
-import DeviceInfo from "../pages/DeviceInfo";
-import Service from "../pages/Service";
-import Error404 from "../pages/Error404";
-import Inventory from "../pages/Inventory";
-import Alert from "../pages/Alert";
+import Dashboard from "../pages/Dashboard.js";
+import Network from "../pages/Network.js";
+import DeviceInfo from "../pages/DeviceInfo.js";
+import Service from "../pages/Service.js";
+import Error404 from "../pages/Error404.js";
+import Inventory from "../pages/Inventory.js";
+import Alert from "../pages/Alert.js";
 import {useDispatch} from "react-redux";
-import MachineEntityService from "../services/MachineEntityService";
-import {SetMachineEntities} from "../store/redux/action/MachineEntityAction";
+import MachineEntityService from "../services/MachineEntityService.js";
+import {SetMachineEntities} from "../store/redux/action/MachineEntityAction.js";
 import {useEffect} from "react";
 
 const App = ()=> {

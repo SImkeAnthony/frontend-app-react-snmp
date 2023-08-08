@@ -1,4 +1,4 @@
-import {ProcessorRequestStore} from "../../store/ProcessorRequestStore";
+import {ProcessorRequestStore} from "../../store/ProcessorRequestStore.js";
 export const ProcessorTable = () => {
     const {getProcessors} = ProcessorRequestStore();
 

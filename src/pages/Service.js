@@ -1,5 +1,5 @@
-import {ServiceStats} from "../components/primary/ServiceStats";
-import ServiceList from "../components/primary/ServiceList";
+import {ServiceStats} from "../components/primary/ServiceStats.js";
+import ServiceList from "../components/primary/ServiceList.js";
 
 
 const Service = ()=>{

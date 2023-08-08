@@ -1,6 +1,6 @@
 import {useDispatch, useSelector} from "react-redux";
-import {SetAlerts} from "./redux/action/AlertAction";
-import {AlertMapper} from "./AlertMapper";
+import {SetAlerts} from "./redux/action/AlertAction.js";
+import {AlertMapper} from "./AlertMapper.js";
 export const AlertRequestStore = () =>{
     const alerts = useSelector(state => state.alertReducer.alerts);
     const dispatch = useDispatch();

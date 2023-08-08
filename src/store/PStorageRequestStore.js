@@ -1,6 +1,6 @@
 import {useDispatch, useSelector} from "react-redux";
-import {SelectPStorageEntity} from "./redux/action/PStorageEntityAction";
-import MachineEntityMapper from "./MachineEntityMapper";
+import {SelectPStorageEntity} from "./redux/action/PStorageEntityAction.js";
+import MachineEntityMapper from "./MachineEntityMapper.js";
 
 export const PStorageRequestStore = () => {
     const machineEntities = useSelector(state => state.machineEntityReducer.machineEntities);
