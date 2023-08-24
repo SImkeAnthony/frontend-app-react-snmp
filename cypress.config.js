@@ -6,10 +6,13 @@ export default defineConfig({
       // implement node event listeners here
     },
     specPattern: "**/*.cy.{js,jsx,ts,tsx}",
-    baseURL:"http://localhost:3000"
+    baseURL: "http://localhost:3000",
   },
-
   component: {
-    specPattern:"**/*.cy.{js,jsx,ts,tsx}"
+    specPattern: "**/*.cy.{js,jsx,ts,tsx}",
+    devServer: {
+      framework: "create-react-app",
+      bundler: "webpack",
+    },
   },
 });

@@ -11,6 +11,7 @@ import {useDispatch} from "react-redux";
 import MachineEntityService from "../services/MachineEntityService.js";
 import {SetMachineEntities} from "../store/redux/action/MachineEntityAction.js";
 import {useEffect} from "react";
+import Error500 from "../pages/Error500.js";
 
 const App = ()=> {
   const dispatch = useDispatch();
@@ -38,6 +39,7 @@ const App = ()=> {
           <Route path="/service" element={<Service/>}/>
           <Route path="/inventory" element={<Inventory/>}/>
           <Route path="/alert" element={<Alert/>}/>
+          <Route path="/500" element={<Error500/>}/>
           <Route path="*" element={<Error404/>}/>
         </Route>
       </Routes>
