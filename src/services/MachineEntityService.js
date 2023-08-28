@@ -1,7 +1,10 @@
 import axios from "axios";
+import {configDev} from "../properties/config.dev.js";
+import {configProd} from "../properties/config.prod.js";
 
-export const MACHINE_CALL_START = 'http://localhost:8080';
-export const RESCAN = "http://localhost:8080/scan"
+const config = process.env.REACT_APP_ENV === 'dev' ? configDev : configProd;
+export const MACHINE_CALL_START = config.apiBaseUri;
+export const RESCAN = config.apiBaseUri+"scan";
 
 class MachineEntityService {
     static getMachineEntities(){
