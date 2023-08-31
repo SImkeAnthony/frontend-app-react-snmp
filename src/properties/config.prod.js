@@ -1,3 +1,3 @@
 export const configProd = {
-    apiBaseUri: "http://192.168.0.11:8080",
+    apiBaseUri: "http://172.16.8.250:8080",
 };
