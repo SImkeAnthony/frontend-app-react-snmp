@@ -6,18 +6,18 @@ const config = process.env.REACT_APP_ENV === 'dev' ? configDev : configProd;
 export const MACHINE_CALL_START = config.apiBaseUri;
 export const RESCAN = config.apiBaseUri+"/scan";
 
-const headers = {
-    'Access-Control-Allow-Origin': '*',
-    'Content-Type': 'application/json',
-    'Access-Control-Allow-Methods': 'GET, PUT, POST, DELETE, OPTIONS',
-}
-
 class MachineEntityService {
     static getMachineEntities(){
-        return axios.get(MACHINE_CALL_START, {headers});
+        return axios.get(MACHINE_CALL_START, (req,res)=>{
+            req.withCredentials("true");
+            res.headers("Access-Control-Allow-Origin", "*",);
+        });
     }
     static networkScan(){
-        return axios.get(RESCAN,{headers});
+        return axios.get(RESCAN,(req,res)=>{
+            req.withCredentials("true");
+            res.headers("Access-Control-Allow-Origin", "*",);
+        });
     }
 }
 export default MachineEntityService;
